@@ -35,7 +35,7 @@ DOL的配置过程
 
 * 按照师兄给的ppt的步骤来，直到最后一步运行一个例子，其他的都挺顺利的，中间只有遇到一个就是利用$ ls看目录文件的，执行$ ls命令时，我退回都了主文件夹，所以输出的当前目录为如下
 
-![图片6](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture6.jpg)
+  ![图片6](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture6.jpg)
 
 只是才知道自己弄错了，重新进入了objdir文件中。
 *还有一个问题就是我是直接解压dol-ethz.zip，然后把解压文件放入了自己创建的dol文件中，这样导致后面编译dol的时候，一直找不到文件资源，然后后来才知道是我把整个文件放到了dol文件中，这样命令在执行$	ant -f build_zip.xml all 的时候，在dol文件目录在没有找到对应的build路径，所以才导致编译失败的。
