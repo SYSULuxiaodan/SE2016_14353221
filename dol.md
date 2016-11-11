@@ -2,7 +2,8 @@
 _______________________
 ####任务一
       ————修改example2的代码，使其3个square模块变成两个模块
-1）未修改代码，直接运行example2的运行结果如下：[picture1](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture31.png)
+1）未修改代码，直接运行example2的运行结果如下：
+ ![picture1](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture31.png)
 可以看到输出值是以三次方的形式出现的。
 根据代码如下:[picture2](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture32.png)
 在上面的代码中，代码通过定义了3个square模块，通过迭代生成了连接connection。通过<variable value="3" name="N"/>定义了3个square模块，其中N值表示square的模块数量，整个过程generatort通过N个square模块与consumer进行连接。而square的模块通过N值来进行迭代，当还未到N数量的时候，它的输入端口还是设定为C2,即它连接的端口还是下一个square模块，当square模块达到N值时，它连接的端口是consumer的端口。所以我改变定义中的N的values值，改为2，这样就使3个square模块变为2个square模块。一个模块是平方化，两个模块是2的四次方。运行完，结果如下：[picture3](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture33.png)
