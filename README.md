@@ -28,7 +28,7 @@ DOL的配置过程
 
 12. 进入build/bin/mian路径，利用$	ant -f runexample.xml -Dnumber=1命令运行第一个例子，如果Build successful 则证明成功。
 
-![图片5](http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/b8*Dk0*q88o9KymPR*bhOd6UrtkcSSo14XA*OHP1JT4!/b/dI8AAAAAAAAA&bo=FAOAAgAAAAAFB7E!&rf=viewer_4)
+![图片5](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture5.jpg)
 
 
 #####（二）遇到的问题及其解决方法
