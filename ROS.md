@@ -20,6 +20,7 @@ https://help.ubuntu.com/community/Repositories/Ubuntu。
 
 1) 使用下面的代码进行设置软件源，一旦添加了正确的软件源，操作系统就知道去哪里下载软件，并根据命令自动安装软件。
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
 2)利用下面的代码设置key
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
 
