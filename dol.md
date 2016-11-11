@@ -8,12 +8,15 @@ _______________________
 可以看到输出值是以三次方的形式出现的。
 
 根据代码如下:
+
  ![picture2](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture32.png)
  
 在上面的代码中，代码通过定义了3个square模块，通过迭代生成了连接connection。通过<variable value="3" name="N"/>定义了3个square模块，其中N值表示square的模块数量，整个过程generatort通过N个square模块与consumer进行连接。而square的模块通过N值来进行迭代，当还未到N数量的时候，它的输入端口还是设定为C2,即它连接的端口还是下一个square模块，当square模块达到N值时，它连接的端口是consumer的端口。所以我改变定义中的N的values值，改为2，这样就使3个square模块变为2个square模块。一个模块是平方化，两个模块是2的四次方。运行完，结果如下：
+
  ![picture3](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture33.png)
  
 example2.dot图如下：
+
  ![picture4](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture34.png)
 
 
@@ -26,12 +29,15 @@ example2.dot图如下：
  
 可以看到其输出结果是以2次方的形式出现的。
 根据代码如下：
+
  ![picture6](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture36.png)
  
 代码通过square.c的代码将读入输入端信号i，将其平方后写到输出端，这样结果以平方的结果出现。修改代码i=ixi为i=ixixi的形式。将其三次方后再写到输出端，这样就运行结果以三次方的形式出现，运行结果如下：
+
  ![picture7](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture37.png)
  
 example1.dot图如下：
+
  ![picture8](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture38.png)
 
 ####实验感想
