@@ -12,20 +12,20 @@ DOL的配置过程
 6. 解压后，利用$	cd systemc-2.3.1命令进入systemc-2.3.1文件夹中，新建一个文件夹objdir
 7. 利用$	cd objdir进入文件中objdir文件夹中，运行$	../configure CXX=g++ --disable-async-updates命令，根据系统的环境设置一下参数，用于编译。参数等设置成功能看待如下图片
 ![图片1](https://raw.githubusercontent.com/SYSULuxiaodan/SE2016_14353221/master/picture1.jpg)
-8. 利用$	sudo make install进行编译，编译完后利用$ cd ..       $ ls命令可以看到objdir文件下的目录。编译成功可以看到objdir的目录文件如下![图片2]("http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/G2Gez.nd3O47VFesuCxqcFTg81SCiZGBsh9DRHcpvnU!/b/dHwBAAAAAAAA&bo=twKwAAAAAAAFByE!&rf=viewer_4")
-9. 利用 $	   pwd命令输出当前工作路径，并记录路径。如图，我的工作路径如下：![图片3]("http://a1.qpic.cn/psb?/V14Pio6S2w1SSc/4uPs5TELA*K9igTX58CnQs5Tcq81Z3IOcU0.GU3W1KI!/b/dHcBAAAAAAAA&bo=.gFEAAAAAAAFB5s!&rf=viewer_4")
+8. 利用$	sudo make install进行编译，编译完后利用$ cd ..       $ ls命令可以看到objdir文件下的目录。编译成功可以看到objdir的目录文件如下![图片2](http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/G2Gez.nd3O47VFesuCxqcFTg81SCiZGBsh9DRHcpvnU!/b/dHwBAAAAAAAA&bo=twKwAAAAAAAFByE!&rf=viewer_4)
+9. 利用 $	   pwd命令输出当前工作路径，并记录路径。如图，我的工作路径如下：![图片3](http://a1.qpic.cn/psb?/V14Pio6S2w1SSc/4uPs5TELA*K9igTX58CnQs5Tcq81Z3IOcU0.GU3W1KI!/b/dHcBAAAAAAAA&bo=.gFEAAAAAAAFB5s!&rf=viewer_4)
 10. 进入dol文件夹，找到build_zip.xml文件，以gredit的方式打开文件，找到下面property name="systemc.inc" value="YYY/include"，property name="systemc.lib" value="YYY/lib-linux/libsystemc.a" 两句话，将YYY改成第9步骤记录的工作路径。
 11. 利用$	ant -f build_zip.xml all进行编译，当看到build successful时表示编译成功。编译成功如图：
 
-![图4]("http://a2.qpic.cn/psb?/V14Pio6S2w1SSc/FB.J4rOqW7EnGgIrisYZNz*QpH7ts6I4xWMkVVFhsTo!/b/dAkBAAAAAAAA&bo=RAGJAAAAAAAFB.g!&rf=viewer_4")
+![图4](http://a2.qpic.cn/psb?/V14Pio6S2w1SSc/FB.J4rOqW7EnGgIrisYZNz*QpH7ts6I4xWMkVVFhsTo!/b/dAkBAAAAAAAA&bo=RAGJAAAAAAAFB.g!&rf=viewer_4)
 12. 进入build/bin/mian路径，利用$	ant -f runexample.xml -Dnumber=1命令运行第一个例子，如果Build successful 则证明成功。
-![图片                                                                                                                     5]("http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/b8*Dk0*q88o9KymPR*bhOd6UrtkcSSo14XA*OHP1JT4!/b/dI8AAAAAAAAA&bo=FAOAAgAAAAAFB7E!&rf=viewer_4")
+![图片5](http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/b8*Dk0*q88o9KymPR*bhOd6UrtkcSSo14XA*OHP1JT4!/b/dI8AAAAAAAAA&bo=FAOAAgAAAAAFB7E!&rf=viewer_4)
 
 
 #####（二）遇到的问题及其解决方法
 
 * 按照师兄给的ppt的步骤来，直到最后一步运行一个例子，其他的都挺顺利的，中间只有遇到一个就是利用$ ls看目录文件的，执行$ ls命令时，我退回都了主文件夹，所以输出的当前目录为如下
-![图片                                                                                                                     6]("http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/2q64hgHLBKgIFi9PmZrS7pV4fkMyiQ0OL247unx*QmA!/b/dAoBAAAAAAAA&bo=4wKBAAAAAAAFB0Q!&rf=viewer_4")
+![图片6](http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/2q64hgHLBKgIFi9PmZrS7pV4fkMyiQ0OL247unx*QmA!/b/dAoBAAAAAAAA&bo=4wKBAAAAAAAFB0Q!&rf=viewer_4)
 只是才知道自己弄错了，重新进入了objdir文件中。
 *还有一个问题就是我是直接解压dol-ethz.zip，然后把解压文件放入了自己创建的dol文件中，这样导致后面编译dol的时候，一直找不到文件资源，然后后来才知道是我把整个文件放到了dol文件中，这样命令在执行$	ant -f build_zip.xml all 的时候，在dol文件目录在没有找到对应的build路径，所以才导致编译失败的。
 * 一直到最后一步运行的时候，才出现了比较多的问题，忙着解决问题，忘记截图了。
