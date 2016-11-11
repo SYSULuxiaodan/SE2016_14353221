@@ -12,7 +12,7 @@ DOL的配置过程
 6. 解压后，利用$	cd systemc-2.3.1命令进入systemc-2.3.1文件夹中，新建一个文件夹objdir
 7. 利用$	cd objdir进入文件中objdir文件夹中，运行$	../configure CXX=g++ --disable-async-updates命令，根据系统的环境设置一下参数，用于编译。参数等设置成功能看待如下图片
 ![图片1](https://raw.githubusercontent.com/SYSULuxiaodan/SE2016_14353221/master/picture1.jpg)
-8. 利用$	sudo make install进行编译，编译完后利用$ cd ..       $ ls命令可以看到objdir文件下的目录。编译成功可以看到objdir的目录文件如下![图片2](http://a3.qpic.cn/psb?/V14Pio6S2w1SSc/G2Gez.nd3O47VFesuCxqcFTg81SCiZGBsh9DRHcpvnU!/b/dHwBAAAAAAAA&bo=twKwAAAAAAAFByE!&rf=viewer_4)
+8. 利用$	sudo make install进行编译，编译完后利用$ cd ..       $ ls命令可以看到objdir文件下的目录。编译成功可以看到objdir的目录文件如下![图片2](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture2.jpg)
 9. 利用 $	   pwd命令输出当前工作路径，并记录路径。如图，我的工作路径如下：![图片3](http://a1.qpic.cn/psb?/V14Pio6S2w1SSc/4uPs5TELA*K9igTX58CnQs5Tcq81Z3IOcU0.GU3W1KI!/b/dHcBAAAAAAAA&bo=.gFEAAAAAAAFB5s!&rf=viewer_4)
 10. 进入dol文件夹，找到build_zip.xml文件，以gredit的方式打开文件，找到下面property name="systemc.inc" value="YYY/include"，property name="systemc.lib" value="YYY/lib-linux/libsystemc.a" 两句话，将YYY改成第9步骤记录的工作路径。
 11. 利用$	ant -f build_zip.xml all进行编译，当看到build successful时表示编译成功。编译成功如图：
