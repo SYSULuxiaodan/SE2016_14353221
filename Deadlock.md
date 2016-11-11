@@ -9,14 +9,14 @@
 
 ####二、死锁停在第几次？以及对程序产生死锁的解释
 根据实验步骤，在ubuntu下跑了，我把count值一直调到50万，把循环次数定到了1000还没有死锁，所以在windows运行了。我定义的循环次数是200次，如下运行到173次的时候停止运行了。死锁停在了第173次。运行运行结果如下：
-！[picture1](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture41.png)
+  ![picture1](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture41.png)
 
 如上图所示，死锁停在了第173次。
 下面解释下所用程序产生死锁的解释。
 首先解释下代码的意思。代码如下：
-![picture2](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture42.png)
+ ![picture2](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture42.png)
 
-！[picture3](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture43.png)
+ ![picture3](https://github.com/SYSULuxiaodan/SE2016_14353221/blob/master/picture43.png)
 
 class A中和classB中分别定义了方法A和方法B。两个class方法一样，class A方法中传入的是资源B，调用资源B,向控制台输出“Inside A。last()" classB中传入的值资源A,调用资源B向控制台上输出"Inside B.last()"。
 接下来是运行主函数，Runnable（）在这个函数中，首先新定义A，B两个方法。然后定义一个新线程 t,当线程t 开始start使，线程t进入等待队列等待count时间后调用a.menthoA(b)，然后线程继续执行，调用b.methodA(a),当它们在执行的过程中，如果无法及时的释放a和b，那么就会导致methodA要请求的资源被MenthodB占有，menthodB要请求的资源被methodA占有。这样就形成了一种环路关系，导致了死锁产生。
